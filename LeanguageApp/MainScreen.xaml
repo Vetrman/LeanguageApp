@@ -1,0 +1,49 @@
+﻿<Window x:Class="LeanguageApp.MainScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Language Learning App" 
+        Height="700" Width="1000"
+        MinHeight="600" MinWidth="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal">
+
+    <Window.Resources>
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2D2D30"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#3E3E42"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель навигации -->
+        <Border Grid.Row="0" Background="#1E1E1E" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnReading" Content="📖 Reading" Style="{StaticResource NavButtonStyle}" Click="NavButton_Click"/>
+                <Button x:Name="btnSpeaking" Content="🎤 Speaking" Style="{StaticResource NavButtonStyle}" Click="NavButton_Click" IsEnabled="False"/>
+                <Button x:Name="btnListening" Content="🔊 Listening" Style="{StaticResource NavButtonStyle}" Click="NavButton_Click" IsEnabled="False"/>
+                <Button x:Name="btnWriting" Content="✏️ Writing" Style="{StaticResource NavButtonStyle}" Click="NavButton_Click" IsEnabled="False"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Контентная область -->
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
