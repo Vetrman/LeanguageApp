@@ -38,7 +38,7 @@ namespace LeanguageApp
             UpdateFlipButton();
         }
 
-        // ========== ОСНОВНЫЕ МЕТОДЫ КАРТОЧЕК ==========
+    
         private void InitializeFlashcards()
         {
             flashcards = new List<Flashcard>();
@@ -146,7 +146,7 @@ namespace LeanguageApp
             UpdateFlipButton();
         }
 
-        // ========== ОБНОВЛЕННАЯ ЛОГИКА КНОПКИ FLIP ==========
+      
         private void UpdateFlipButton()
         {
             if (isFlipped)
@@ -190,7 +190,7 @@ namespace LeanguageApp
             UpdateFlipButton();
         }
 
-        // ========== ДИАЛОГИ УДАЛЕНИЯ И УСПЕХА ==========
+
         private void ShowDeleteConfirmDialog(Flashcard card)
         {
             cardToDelete = card;
@@ -293,7 +293,7 @@ namespace LeanguageApp
             ShowDeleteConfirmDialog(flashcards[currentCardIndex]);
         }
 
-        // ========== ФОРМА ДОБАВЛЕНИЯ КАРТОЧКИ ==========
+      
         private void ShowAddCardForm()
         {
             txtFront.Text = "";
@@ -386,7 +386,7 @@ namespace LeanguageApp
             ShowSuccessDialog("Card added successfully!");
         }
 
-        // ========== СПИСОК ВСЕХ КАРТОЧЕК ==========
+       
         private void ShowCardsList()
         {
             CardsList.ItemsSource = null;
@@ -423,7 +423,7 @@ namespace LeanguageApp
             }
         }
 
-        // ========== АНИМАЦИИ ==========
+     
         private void ShowFormWithAnimation(FrameworkElement form)
         {
             form.Visibility = Visibility.Visible;
@@ -466,7 +466,7 @@ namespace LeanguageApp
             form.BeginAnimation(OpacityProperty, animation);
         }
 
-        // ========== КАСТОМНЫЙ ДИАЛОГ ДЛЯ СООБЩЕНИЙ ==========
+        
         private void ShowMessageDialog(string message)
         {
             MessageDialogText.Text = message;
@@ -503,7 +503,7 @@ namespace LeanguageApp
             MessageDialog.BeginAnimation(OpacityProperty, animation);
         }
 
-        // ========== КЛИКИ МЫШКОЙ ==========
+    
         private void Page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount == 2 && e.ChangedButton == MouseButton.Left)
@@ -533,7 +533,7 @@ namespace LeanguageApp
             }
         }
 
-        // ========== ГОРЯЧИЕ КЛАВИШИ ==========
+     
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
@@ -564,7 +564,7 @@ namespace LeanguageApp
             }
         }
 
-        // ========== ОБРАБОТЧИКИ СОБЫТИЙ ==========
+        
         private void BtnFlip_Click(object sender, RoutedEventArgs e) => FlipCard();
 
         private void BtnPrev_Click(object sender, RoutedEventArgs e)
