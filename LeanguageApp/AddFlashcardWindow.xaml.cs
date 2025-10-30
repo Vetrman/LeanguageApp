@@ -111,7 +111,7 @@ namespace LeanguageApp
             }
         }
 
-        // ========== ЧЕРНЫЕ ДИАЛОГИ КАК ПРИЛОЖЕНИЕ ==========
+
 
         private void ShowMessageDialog(string message)
         {
@@ -156,7 +156,7 @@ namespace LeanguageApp
             MessageDialog.BeginAnimation(OpacityProperty, animation);
         }
 
-        // ========== ОБРАБОТЧИКИ СОБЫТИЙ ==========
+     
 
         private Action<bool> _confirmCallback;
 
